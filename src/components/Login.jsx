@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col">
+        <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold pb-3">Wellcome back</h1>
           </div>
@@ -31,13 +32,24 @@ const Login = () => {
                   className="input input-bordered"
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
+                  <span className="label-text-alt">
+                    Forgot password?{" "}
+                    <Link className=" link link-hover"> reset here</Link>
+                  </span>
+                </label>
+
+                <label className="label">
+                  <span className="label-text-alt">
+                    Don't have an account? 
+                    <Link to="/register" className=" link link-hover">
+                      {" "}
+                      Register
+                    </Link>
+                  </span>
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary"> Login</button>
               </div>
             </div>
           </div>
