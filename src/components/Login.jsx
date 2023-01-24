@@ -9,7 +9,8 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    signInUser(email, password)
+    signInUser(email, password);
+    form.reset()
   };
   return (
     <div>
@@ -39,7 +40,7 @@ const Login = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     placeholder="password"
                     className="input input-bordered"
                     name="password"
