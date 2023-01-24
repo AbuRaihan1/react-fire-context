@@ -12,7 +12,7 @@ const Header = () => {
     <div>
       <div className="navbar bg-primary text-primary-content d-flex justify-between">
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          daisyUI
+          Navbar
         </Link>
         <div>
           <Link to="/home" className="btn btn-ghost normal-case text-l">
@@ -27,13 +27,15 @@ const Header = () => {
 
           <Link>{user?.email}</Link>
           {user?.email ? (
-            <Link onClick={handleLogOut} className="mx-3"> <button className="btn btn-sm">Log out</button></Link>
+            <Link onClick={handleLogOut} className="mx-3">
+              {" "}
+              <button className="btn btn-sm">Log out</button>
+            </Link>
           ) : (
             <Link to="/login" className="mx-3">
-              Log in
+              <button className="btn btn-sm">Log in</button>
             </Link>
           )}
-          
         </div>
       </div>
     </div>
